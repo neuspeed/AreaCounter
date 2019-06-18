@@ -1,0 +1,4 @@
+Создаем дополнительную  промежуточную таблицу связей и связываем уникальные поля продуктов и категорий. Я бы делал так.
+
+
+SELECT * FROM products LEFT JOIN connection_category_product ON products.ID = connection_category_product.ProductId LEFT JOIN categories ON categories.ID = connection_category_product.CategoryId
